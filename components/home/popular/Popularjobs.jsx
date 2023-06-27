@@ -19,7 +19,7 @@ const Popularjobs = () => {
   const router = useRouter();
 
   const { data, loading, error } = useFetch('search', {
-    query: 'Python developer in Texas, USA',
+    query: 'React Developer',
     num_pages: 1,
   });
   console.log(data);
@@ -59,6 +59,7 @@ const Popularjobs = () => {
             contentContainerStyle={{
               columnGap: SIZES.medium,
             }}
+            horizontal
           />
         )}
       </View>
