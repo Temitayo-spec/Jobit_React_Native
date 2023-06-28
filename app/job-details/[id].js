@@ -26,7 +26,7 @@ const JobDetails = () => {
   const params = useSearchParams();
   const router = useRouter();
 
-  const { data, isLoading, error, refetch } = useFetch('job-details', {
+  const { data, loading, error, refetch } = useFetch('job-details', {
     job_id: params.id,
   });
 
@@ -95,7 +95,7 @@ const JobDetails = () => {
             <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
           }
         >
-          {isLoading ? (
+          {loading ? (
             <ActivityIndicator size="large" color={COLORS.primary} />
           ) : error ? (
             <Text>Something went wrong</Text>

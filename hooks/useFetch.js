@@ -25,7 +25,7 @@ export const useFetch = (url, query) => {
       setLoading(false);
     } catch (error) {
       setError(error);
-      alert('There is an error');
+      console.log(error);
     } finally {
       setLoading(false);
     }
